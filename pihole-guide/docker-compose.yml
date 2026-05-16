@@ -11,5 +11,5 @@ services:
     environment:
       TZ: 'Asia/Almaty'
     volumes:
-      - /etc/pihole-docker/:/etc/pihole/
-      - /etc/dnsmasq.d-docker/:/etc/dnsmasq.d/
+      - /etc/pihole-docker/:/etc/pihole/:Z
+      - /etc/dnsmasq.d-docker/:/etc/dnsmasq.d/:Z
