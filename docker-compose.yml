@@ -1,0 +1,15 @@
+services:
+  
+  pihole-service:
+    image: pihole/pihole:latest
+    container_name: pihole_container
+    restart: always
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80"
+    environment:
+      TZ: 'Asia/Almaty'
+    volumes:
+      - /etc/pihole-docker/:/etc/pihole/
+      - /etc/dnsmasq.d-docker/:/etc/dnsmasq.d/
